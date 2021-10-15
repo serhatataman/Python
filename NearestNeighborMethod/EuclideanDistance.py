@@ -1,11 +1,17 @@
-import math
+import numpy as np
 
 a=[14, 3, 0.8]
 b=[2, 6, 0.8]
 
 
-def euclidean_distance():
-    distance = math.sqrt((a[0]-b[0])**2 + (a[1]-b[1])**2 + (a[2]-b[2])**2)
-    print(distance)
+def dist(a, b):
+    sum = 0
+    for ai, bi in zip(a, b):
+        sum = sum + (ai - bi)**2
 
-euclidean_distance()
+    distance = np.sqrt(sum)
+    print(distance)
+    return distance
+
+
+dist(a, b)
