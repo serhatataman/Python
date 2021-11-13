@@ -42,7 +42,6 @@ def main():
             x_test.append([int(a) for a in test_data.split(" ")[0:5]])
             y_test.append([int(a) for a in test_data.split(" ")[5:6]].pop())
 
-
     # print out the linear regression coefficients
     print(c)
 
