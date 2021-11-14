@@ -2,9 +2,9 @@ import pandas as pd
 import numpy as np
 
 # Users' place ratings
-frame = pd.read_csv('rating_final.csv')
+frame = pd.read_csv('../rating_final.csv')
 # The type of cuisine that is served in each restaurant
-cuisine = pd.read_csv('chefmozcuisine.csv')
+cuisine = pd.read_csv('../chefmozcuisine.csv')
 
 # display data
 print('\n---------------------Ratings data-----------------------------------------------')
