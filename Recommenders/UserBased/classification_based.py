@@ -9,7 +9,7 @@ from pandas import Series, DataFrame
 from sklearn.linear_model import LogisticRegression
 
 print('\n---------------------Banking data-----------------------------------------------')
-bank_full = pd.read_csv('../bank_full_w_dummy_vars.csv')
+bank_full = pd.read_csv('bank_full_w_dummy_vars.csv')
 print(bank_full.head())
 
 print('\n---------------------Info-----------------------------------------------')
