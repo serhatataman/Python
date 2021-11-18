@@ -5,7 +5,7 @@
 import numpy as np
 import pandas as pd
 
-from pandas import Series, DataFrame
+from sklearn.metrics import classification_report
 from sklearn.linear_model import LogisticRegression
 
 print('\n---------------------Banking data-----------------------------------------------')
@@ -38,7 +38,8 @@ print(y_pred)
 
 # If the model returns zero, then it predicts that Sam is NOT likely to accept the offer
 
-
+# print('\n---------------------Performance metrics-------------------------------------')
+# print(classification_report(y, y_pred))
 
 
 
