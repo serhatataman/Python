@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 # Copyright 2009-2017 BHG http://bw.org/
 
-def function(n):
+def function(n = 7):
     print(n)
+    return n*2
 
 
-function(47)
+x = function(42)
+print(x)

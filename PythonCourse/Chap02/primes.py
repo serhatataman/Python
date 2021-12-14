@@ -10,6 +10,7 @@ def isprime(n):
     else:
         return True
 
+
 n = 5
 if isprime(n):
     print(f'{n} is prime')
