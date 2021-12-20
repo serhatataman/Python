@@ -3,6 +3,7 @@
 
 import time
 
+
 def elapsed_time(f):
     def wrapper():
         t1 = time.time()
@@ -19,7 +20,9 @@ def big_sum():
         num_list.append(num)
     print(f'Big sum: {sum(num_list)}')
 
+
 def main():
     big_sum()
+
 
 if __name__ == '__main__': main()
