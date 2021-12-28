@@ -5,9 +5,10 @@ def inclusive_range(*args):
     numargs = len(args)
     start = 0
     step = 1
-    
+
     # initialize parameters
     if numargs < 1:
+        # raise keyword is used to raise an exception
         raise TypeError(f'expected at least 1 argument, got {numargs}')
     elif numargs == 1:
         stop = args[0]
@@ -15,7 +16,8 @@ def inclusive_range(*args):
         (start, stop) = args
     elif numargs == 3:
         (start, stop, step) = args
-    else: raise TypeError(f'expected at most 3 arguments, got {numargs}')
+    else:
+        raise TypeError(f'expected at most 3 arguments, got {numargs}')
 
     # generator
     i = start
@@ -23,9 +25,15 @@ def inclusive_range(*args):
         yield i
         i += step
 
-def main():
-    for i in inclusive_range(25):
-        print(i, end = ' ', flush = True)
-    print()
 
-if __name__ == '__main__': main()
+def main():
+    try:
+        for i in inclusive_range(1, 2, 3, 4):
+            print(i, end=' ', flush=True)
+        print()
+    except TypeError as e:
+        print(f'range error: {e}')
+
+
+if __name__ == '__main__':
+    main()

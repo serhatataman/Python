@@ -16,6 +16,7 @@ class Animal:
     def sound(self):
         return self._sound
 
+
 def print_animal(o):
     if not isinstance(o, Animal):
         raise TypeError('print_animal(): requires an Animal')
@@ -29,4 +30,8 @@ def main():
     print_animal(a1)
     print_animal(Animal('velociraptor', 'veronica', 'hello'))
 
-if __name__ == '__main__': main()
+if __name__ == '__main__':
+    main()
+
+# Object is an instance of class
+

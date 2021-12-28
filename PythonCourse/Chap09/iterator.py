@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Copyright 2009-2017 BHG http://bw.org/
 
-class inclusive_range:
+class InclusiveRange:
     def __init__(self, *args):
         numargs = len(args)
         self._start = 0
@@ -15,10 +15,13 @@ class inclusive_range:
             (self._start, self._stop) = args
         elif numargs == 3:
             (self._start, self._stop, self._step) = args
-        else: raise TypeError(f'expected at most 3 arguments, got {numargs}')
+        else:
+            raise TypeError(f'expected at most 3 arguments, got {numargs}')
 
         self._next = self._start
-    
+
+    # __iter__() is a special method that is called when an object is used as an iterator,
+    # so it defines the object as an iterator
     def __iter__(self):
         return self
 
@@ -30,9 +33,12 @@ class inclusive_range:
             self._next += self._step
             return _r
 
+
 def main():
-    for n in inclusive_range(25):
+    for n in InclusiveRange(25):
         print(n, end=' ')
     print()
 
-if __name__ == '__main__': main()
+
+if __name__ == '__main__':
+    main()
