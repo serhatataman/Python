@@ -3,41 +3,44 @@
 
 import sqlite3
 
+
 def main():
-    print('connect')
-    db = sqlite3.connect('db-api.db')
+    print('connecting to db...')
+    db = sqlite3.connect('db-api.db')  # creates db if it doesn't exist
     cur = db.cursor()
-    print('create')
+    print('creating table...')
     cur.execute("DROP TABLE IF EXISTS test")
     cur.execute("""
         CREATE TABLE test (
             id INTEGER PRIMARY KEY, string TEXT, number INTEGER
         )
         """)
-    print('insert row')
+    print('inserting row')
     cur.execute("""
         INSERT INTO test (string, number) VALUES ('one', 1)
         """)
-    print('insert row')
+    print('inserting row')
     cur.execute("""
         INSERT INTO test (string, number) VALUES ('two', 2)
         """)
-    print('insert row')
+    print('inserting row')
     cur.execute("""
         INSERT INTO test (string, number) VALUES ('three', 3)
         """)
-    print('commit')
+    print('committing changes...')
     db.commit()
-    print('count')
+    print('counting rows...')
     cur.execute("SELECT COUNT(*) FROM test")
-    count = cur.fetchone()[0]
+    count = cur.fetchone()[0]  # fetchone() returns a tuple
     print(f'there are {count} rows in the table.')
-    print('read')
+    print('reading data...')
     for row in cur.execute("SELECT * FROM test"):
         print(row)
-    print('drop')
+    print('dropping table...')
     cur.execute("DROP TABLE test")
     print('close')
     db.close()
 
-if __name__ == '__main__': main()
+
+if __name__ == '__main__':
+    main()

@@ -9,8 +9,10 @@ import sqlite3
 
 __version__ = '1.2.0'
 
+
 class bwDB:
     def __init__(self, **kwargs):
+        # If we specify a string as a first line, it will be used as a description of the method
         """
             db = bwDB( [ table = ''] [, filename = ''] )
             constructor method
