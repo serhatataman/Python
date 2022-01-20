@@ -15,9 +15,18 @@ print(df_obj)
 print("\nDuplicate rows:")
 print(df_obj.duplicated())
 
+# Drop duplicate rows
+print("\nDataFrame without duplicate rows:")
+print(df_obj.drop_duplicates())
 
 
+df_obj = DataFrame({"column 1": [1, 1, 2, 2, 3, 3, 3],
+                    "column 2": ["a", "a", "b", "b", "c", "c", "c"],
+                    "column 3": ["A", "A", "B", "B", "C", "D", "C"]})
 
+# Drop duplicates from only a specific column
+print("\nDataFrame without duplicate rows from a specific column:")
+print(df_obj.drop_duplicates(["column 3"]))
 
 
 
