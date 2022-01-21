@@ -28,12 +28,3 @@ df_obj = DataFrame({"column 1": [1, 1, 2, 2, 3, 3, 3],
 print("\nDataFrame without duplicate rows from a specific column:")
 print(df_obj.drop_duplicates(["column 3"]))
 
-
-
-
-
-
-
-
-
-
