@@ -53,6 +53,59 @@ plt.show(block=True)
 
 # Adding a legend
 
+# The functional method
+plt.pie(z)
+plt.legend(veh_type, loc="best")
+plt.show(block=True)
+
+
+
+# The object-oriented method
+
+fig = plt.figure()
+ax = fig.add_axes([.1, .1, 1, 1])
+mpg.plot()
+
+ax.set_xticks(range(32))
+
+ax.set_xticklabels(cars.car_names, rotation=60, fontsize="medium")
+
+ax.set_title("Miles per gallon of Cars in mtcars Dataset")
+
+ax.set_xlabel("car names")
+ax.set_ylabel("miles/gal")
+
+ax.legend(loc="best")
+plt.show(block=True)
+
+# Annotating your plot (labeling the point on chart)
+
+print("MPG max: " + str(mpg.max()))
+
+fig = plt.figure()
+ax = fig.add_axes([.1, .1, 1, 1])
+mpg.plot()
+
+ax.set_xticks(range(32))
+
+ax.set_xticklabels(cars.car_names, rotation=60, fontsize="medium")
+
+ax.set_title("Miles per gallon of Cars in mtcars Dataset")
+
+ax.set_xlabel("car names")
+ax.set_ylabel("miles/gal")
+
+ax.legend(loc="best")
+# set limit for y axis
+ax.set_ylim([0, 45])
+
+# add tag name, provide the point and text pixels and choose the arrow color and size
+ax.annotate("Toyota Corolla", xy=(19, 33.9), xytext=(21, 35),
+            arrowprops=dict(facecolor="black", shrink=0.05))
+plt.show(block=True)
+
+
+
 
 
 
