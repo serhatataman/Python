@@ -50,11 +50,9 @@ print("\nVariants for each column: " + str(cars.var(numeric_only=True)))
 
 # Count unique values in a series -> it shows how many unique values are present in a dataset
 gear = cars.gear
+# What this tells us is that, the cars dataset has 15 cars with 3 gears, 12 cars with 4 gears, and 5 cars with 5 gears
 print("\nUnique values for each column: \n" + str(gear.value_counts()))
 
-
-
-
-
-
+# Get all of the descriptive statistical values
+print("\nAll of the descriptive statistical values: \n" + str(cars.describe()))
 
