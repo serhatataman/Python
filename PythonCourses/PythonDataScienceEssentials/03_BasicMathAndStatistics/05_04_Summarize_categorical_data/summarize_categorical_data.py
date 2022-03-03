@@ -41,9 +41,3 @@ print("\nNew group created and added to cars dataFrame:\n" + str(cars['group'].d
 pd.crosstab(cars['am'], cars['gear'])
 print("\nCrosstab for am and gears: \n" + str(pd.crosstab(cars['am'], cars['gear'])))
 
-
-
-
-
-
-
