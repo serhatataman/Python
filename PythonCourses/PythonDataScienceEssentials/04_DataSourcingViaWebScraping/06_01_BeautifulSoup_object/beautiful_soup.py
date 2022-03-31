@@ -45,5 +45,3 @@ print("Tag attributes: " + str(tag.attrs))
 
 
 
-
-
