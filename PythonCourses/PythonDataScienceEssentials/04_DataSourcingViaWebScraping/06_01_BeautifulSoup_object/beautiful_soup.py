@@ -43,5 +43,3 @@ print("Tag attributes: " + str(tag.attrs))
 
 # Assign an attribute to existing tag
 
-
-
