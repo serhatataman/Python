@@ -41,5 +41,26 @@ print("The attribute_1's value: " + str(tag['attribute_1']))
 # Print all tag attributes
 print("Tag attributes: " + str(tag.attrs))
 
-# Assign an attribute to existing tag
+# Add an attribute to attribute list
+tag['attribute_2'] = "Heading Level 1"
+print("Tag attributes after addition: " + str(tag.attrs))
+
+# Remove an attribute from attribute list
+del tag['attribute_2']
+print("Tag attributes after deletion of attribute 2: " + str(tag.attrs))
+
+
+print("\n NAVIGATING A PARSE TREE USING TAGS")
+# retrieving all the tags in the html document
+
+# get the head tag from the html document
+print("Head tag: " + str(our_soup_object.head))
+
+print("Title tag: " + str(our_soup_object.title))
+
+# Get the title content which is within b, within body
+print("Title content tag: " + str(our_soup_object.body.b))
+
+
+
 
