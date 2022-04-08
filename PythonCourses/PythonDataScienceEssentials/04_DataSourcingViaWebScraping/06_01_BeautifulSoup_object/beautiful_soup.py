@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 # BEAUTIFUL SOUP
 
 # read html file into a string
-our_html_document = open("html.txt", 'r').read()
+our_html_document = open("../html.txt", 'r').read()
 
 # By default BeautifulSoup has utf-8 formatting, convert it to unicode formatting
 our_soup_object = BeautifulSoup(our_html_document, 'html.parser')
