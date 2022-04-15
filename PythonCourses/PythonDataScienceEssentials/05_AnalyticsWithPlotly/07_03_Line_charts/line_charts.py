@@ -44,13 +44,3 @@ layout = dict(title='Chart from Pandas Dataframe', xaxis=dict(title='x-axis'), y
 df.iplot(filename='cf-simple-line-chart', layout=layout)
 
 
-# 3. Bar chart from pandas dataframe
-
-# with the "trace" variable we specify what kind of chart we want to create
-data = [go.Bar(x=[range(1, 10)], y=[1, 2, 3, 3, 0.5, 4, 3, 2, 1])]
-print("Data for bar chart: ", data)
-
-
-
-
-
