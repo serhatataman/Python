@@ -54,5 +54,3 @@ print("Data for bar chart: ", data)
 
 
 
-
-
