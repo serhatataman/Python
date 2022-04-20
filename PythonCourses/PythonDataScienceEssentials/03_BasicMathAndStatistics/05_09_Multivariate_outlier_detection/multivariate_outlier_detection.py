@@ -36,5 +36,3 @@ plt.show()
 # if we look at the scatterplot matrix, we can see that there are some outliers. After detecting these,
 # we can take necessary steps to remove them.
 
-
-
